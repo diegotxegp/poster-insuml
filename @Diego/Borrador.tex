@@ -1,0 +1,112 @@
+\begin{center}
+\tiny
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Dataset} & \textbf{Metric} & \textbf{AutoGluon} & \textbf{H2O} & \textbf{InsuML} & \textbf{OpenML} \\
+\midrule
+\multicolumn{6}{c}{\textit{Binary Classification}} \\
+\midrule
+blood-transfusion & AUC-ROC & 0.757 & 0.730 & 0.686 & \textbf{0.761} \\
+breast-w & AUC-ROC & \textbf{0.997} & 0.996 & 0.949 & 0.995 \\
+credit-g & AUC-ROC & 0.810 & \textbf{0.847} & 0.711 & 0.807 \\
+diabetes & AUC-ROC & \textbf{0.912} & 0.908 & 0.878 & 0.843 \\
+qsar-biodeg & AUC-ROC & \textbf{0.954} & 0.953 & 0.886 & 0.938 \\
+\midrule
+\multicolumn{6}{c}{\textit{Multi-class Classification}} \\
+\midrule
+analcatdata\_dmft & Accuracy & 0.213 & 0.200 & 0.190 & \textbf{0.599} \\
+cmc & Accuracy & 0.574 & 0.604 & 0.430 & \textbf{0.749} \\
+hypothyroid & Accuracy & 0.995 & 0.993 & 0.558 & \textbf{0.9995} \\
+mfeat-morphological & Accuracy & 0.705 & 0.755 & 0.670 & \textbf{0.970} \\
+vehicle & Accuracy & 0.812 & 0.867 & 0.750 & \textbf{0.970} \\
+\midrule
+\multicolumn{6}{c}{\textit{Regression}} \\
+\midrule
+cholesterol & MAE & 31.910 & 39.729 & 63.463 & \textbf{0.000} \\
+cloud & MAE & \textbf{0.254} & 0.277 & 0.405 & 0.412 \\
+liver-disorders & RMSE & 3.090 & 3.337 & 3.470 & \textbf{0.000} \\
+plasma\_retinol & MAE & \textbf{163.785} & 170.082 & 220.227 & 203.571 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+
+
+
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Category} & \textbf{Aspect} & \textbf{Gil et al. (2019)} & \textbf{Francia et al. (2023)} & \textbf{Lee et al. (2020)} & \textbf{Lindauer et al. (2024)} & \textbf{InsuML} \\ 
+\midrule
+\multirow{3}{*}{\textbf{Data Use}} & Variable selection & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+& Variable requirements & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+& Instance selection & $\checkmark$ & -- & $\checkmark$ & -- & $\checkmark$ \\ 
+\midrule
+\multirow{3}{*}{\textbf{Model Development}} & Model selection & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+& Parameter settings & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+& Solution design & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+\midrule
+\multirow{3}{*}{\textbf{Model Interpretation}} & Model assessment & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+& Model comparison & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+& Parameter comparison & $\checkmark$ & -- & $\checkmark$ & $\checkmark$ & $\checkmark$ \\ 
+\midrule
+\multicolumn{2}{l}{\textbf{Software support}} & -- & Expert-only & -- & -- & $\checkmark$ \\ 
+\multicolumn{2}{l}{\textbf{Evaluation based on HCAI criteria}} & -- & -- & -- & -- & $\checkmark$ \\ 
+\bottomrule
+\end{tabular}%
+}
+
+
+
+
+
+\begin{tikzpicture}  
+\node[inner sep=0pt] {  
+\renewcommand{\arraystretch}{1.4}  
+\begin{tabular}{>{\raggedright\arraybackslash}p{3cm}  
+                >{\raggedright\arraybackslash}p{3.2cm}  
+                *{5}{>{\centering\arraybackslash}p{2cm}}}  
+\toprule  
+\rowcolor{headerblue}  
+\textcolor{white}{\textbf{Category}} &   
+\textcolor{white}{\textbf{Aspect}} &   
+\textcolor{white}{\textbf{Gil et al.}} &   
+\textcolor{white}{\textbf{Francia et al.}} &   
+\textcolor{white}{\textbf{Lee et al.}} &   
+\textcolor{white}{\textbf{Lindauer et al.}} &   
+\textcolor{white}{\textbf{InsuML}} \\   
+\midrule  
+  
+\rowcolor{rowgray}  
+\multicolumn{7}{l}{\textbf{Data Use}} \\  
+& Variable selection & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+\rowcolor{rowgray!50}  
+& Variable requirements & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+& Instance selection & \textcolor{checkgreen}{\Large$\checkmark$} & -- & \textcolor{checkgreen}{\Large$\checkmark$} & -- & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+\midrule  
+  
+\rowcolor{rowgray}  
+\multicolumn{7}{l}{\textbf{Model Development}} \\  
+& Model selection & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+\rowcolor{rowgray!50}  
+& Parameter settings & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+& Solution design & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+\midrule  
+  
+\rowcolor{rowgray}  
+\multicolumn{7}{l}{\textbf{Model Interpretation}} \\  
+& Model assessment & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+\rowcolor{rowgray!50}  
+& Model comparison & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+& Parameter comparison & \textcolor{checkgreen}{\Large$\checkmark$} & -- & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+\midrule  
+  
+\rowcolor{rowgray!50}  
+\multicolumn{2}{l}{\textbf{Software support}} & -- & Expert-only & -- & -- & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+\multicolumn{2}{l}{\textbf{Evaluation based on HCAI criteria}} & -- & -- & -- & -- & \textcolor{checkgreen}{\Large$\checkmark$} \\   
+\bottomrule  
+\end{tabular}  
+};  
+\end{tikzpicture}
